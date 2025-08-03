@@ -2,6 +2,7 @@ package com.szrthk.journalbyszrthk.controller;
 
 import com.szrthk.journalbyszrthk.entity.Journal;
 import com.szrthk.journalbyszrthk.service.Journalservice;
+import lombok.Data;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.*;
-
+@Data
 @RestController
 @RequestMapping("/journal")
 public class journalcontroller {
@@ -30,7 +31,7 @@ public class journalcontroller {
     @PostMapping
     public ResponseEntity<Journal> createEntry(@RequestBody Journal myEntry){
         try {
-            myEntry.setDate(LocalDateTime.now()); //setting date and time on that
+            //myEntry.setDate(LocalDateTime.now()); //setting date and time on that
             journalservice.saveEntry(myEntry);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception e) {
@@ -53,6 +54,7 @@ public class journalcontroller {
         journalservice.deletebyid(myId);
         return true;
     }
+
     @PutMapping("id/{myId}")
     public Journal updatejournalbyentry(@PathVariable ObjectId myId, @RequestBody Journal newEntry){
         Journal old = journalservice.findbyid(myId).orElse(null);
