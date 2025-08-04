@@ -24,30 +24,31 @@ A self-made **Spring Boot CRUD application** for managing journal entries, built
 ---
 
 ## 📂 Project Structure
-* journalbyszrthk/
-* ├── src/
-* │   └── main/
-* │       ├── java/
-* │       │   └── com/
-* │       │       └── szrthk/
-* │       │           └── journalbyszrthk/
-* │       │               ├── controller/
-* │       │               │   ├── healthcheck.java
-* │       │               │   └── journalcontroller.java
-* │       │               ├── entity/
-* │       │               │   └── Journal.java
-* │       │               ├── repo/
-* │       │               │   └── JournalRepo.java
-* │       │               ├── service/
-* │       │               │   └── Journalservice.java
-* │       │               └── JournalbyszrthkApplication.java
-* │       └── resources/
-* │           ├── static/
-* │           ├── templates/
-* │           └── application.properties
-* ├── pom.xml
-* ├── README.md
-* └── .gitignore
+* taskmanagerbyszrthk/
+  ├── src/
+  │   └── main/
+  │       └── java/
+  │           └── com/
+  │               └── szrthk/
+  │                   └── taskmanager/
+  │                       ├── controller/
+  │                       │   └── TaskController.java
+  │                       ├── entity/
+  │                       │   └── Task.java
+  │                       ├── service/
+  │                       │   └── TaskService.java
+  │                       ├── repo/
+  │                       │   └── TaskRepo.java
+  │                       └── TaskmanagerbyszrthkApplication.java
+  │
+  │   └── resources/
+  │       ├── application.properties
+  │       ├── static/
+  │       └── templates/
+  │
+  ├── pom.xml
+  ├── README.md
+  └── .gitignore
 ---
 
 ## 🧑‍💻 How to Run Locally
